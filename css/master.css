@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  --footer-back-color: rgb(242, 242, 242);
+  --yellow-color: rgb(251, 188, 5);
+  --red-color: rgb(234, 67, 53);
+  --green-color: rgb(52, 168, 83);
+  --blue-color: rgb(66, 133, 244);
+}
+/*  */
+.center {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  background-color: var(--container-color);
+  width: 300px;
+  min-height: calc(100vh - 240px);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav {
+  margin-right: 10px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  padding-right: 12.5px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+svg {
+  margin-top: 8px;
+  margin-right: 5px;
+  width: 30px;
+  opacity: 75%;
+  cursor: pointer;
+  height: 30px;
+}
+svg:hover {
+  background-color: var(--footer-back-color);
+  border-radius: 50%;
+}
+svg:hover + span {
+  display: block;
+}
+nav span {
+  position: absolute;
+  display: none;
+  top: 50px;
+  right: 25px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px;
+  border: 0.5px solid black;
+  padding: 5px;
+  background-color: #eee;
+}
+nav i {
+  color: black;
+  position: relative;
+  font-size: 40px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+nav i::after {
+  content: "Google Account";
+  display: none;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  top: 50px;
+  left: -80px;
+  white-space: nowrap;
+  border: 0.5px solid black;
+  padding: 5px;
+  background-color: #eee;
+}
+nav i:hover::after {
+  display: block;
+}
+
+.main .logo {
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+.main .logo span {
+  font-size: 70px;
+  font-weight: 500;
+}
+.blue {
+  color: var(--blue-color);
+}
+.red {
+  color: var(--red-color);
+}
+.green {
+  color: var(--green-color);
+}
+.yellow {
+  color: var(--yellow-color);
+}
+.search {
+  position: relative;
+}
+.search input {
+  width: 280px;
+  height: 25px;
+  border-radius: 50px;
+  border: 2px solid #eee;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  padding-left: 30px;
+}
+.search input:hover {
+  box-shadow: 1px 1px #cdcdcd, -1px -1px #cdcdcd;
+}
+.fa-search {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: #cdcdcd;
+}
+.fa-microphone {
+  position: absolute;
+  top: 8px;
+  left: 277px;
+  color: #cdcdcd;
+  cursor: pointer;
+}
+.fa-microphone::after {
+  content: "Search By Voice";
+  position: absolute;
+  display: none;
+  top: 30px;
+  left: -60px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+  white-space: nowrap;
+}
+
+.fa-microphone:hover::after {
+  display: block;
+}
+.down {
+  margin-top: 35px;
+}
+
+.down input[value="Google Search"] {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.down input[value="I'm Feeling Lucky"] {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.down input:hover {
+  border-color: rgba(167, 162, 162, 0.493);
+}
+.offer {
+  margin-top: 30px;
+}
+.offer span {
+  color: deeppink;
+  cursor: pointer;
+}
+.offer span:hover {
+  text-decoration: underline;
+}
+footer {
+  height: 90px;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  background-color: var(--footer-back-color);
+}
+footer a {
+  margin: 5px;
+  white-space: nowrap;
+  color: black;
+  text-decoration: none;
+  line-height: 1.5;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 500px) {
+  .container {
+    width: 450px;
+    min-height: calc(100vh - 230px);
+  }
+  footer {
+    height: 80px;
+  }
+  .fa-search {
+    position: absolute;
+    top: 8px;
+    left: 80px;
+    color: #cdcdcd;
+  }
+  .fa-microphone {
+    position: absolute;
+    top: 8px;
+    left: 360px;
+    color: #cdcdcd;
+    cursor: pointer;
+  }
+  .fa-microphone::after {
+    content: "Search By Voice";
+    position: absolute;
+    display: none;
+    top: 30px;
+    left: -60px;
+    color: white;
+    background-color: black;
+    padding: 7px;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    min-height: calc(100vh - 195px);
+  }
+  footer {
+    height: 50px;
+  }
+  .search input {
+    width: 400px;
+  }
+  .fa-search {
+    position: absolute;
+    top: 8px;
+    left: 170px;
+    color: #cdcdcd;
+  }
+  .fa-microphone {
+    position: absolute;
+    top: 8px;
+    left: 570px;
+    color: #cdcdcd;
+    cursor: pointer;
+  }
+  .fa-microphone::after {
+    content: "Search By Voice";
+    position: absolute;
+    display: none;
+    top: 30px;
+    left: -60px;
+    color: white;
+    background-color: black;
+    padding: 7px;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    min-height: calc(100vh - 195px);
+  }
+  footer {
+    height: 50px;
+  }
+  .search input {
+    width: 600px;
+  }
+  .fa-search {
+    position: absolute;
+    top: 8px;
+    left: 180px;
+    color: #cdcdcd;
+  }
+  .fa-microphone {
+    position: absolute;
+    top: 8px;
+    left: 775px;
+    color: #cdcdcd;
+    cursor: pointer;
+  }
+  .fa-microphone::after {
+    content: "Search By Voice";
+    position: absolute;
+    display: none;
+    top: 30px;
+    left: -60px;
+    color: white;
+    background-color: black;
+    padding: 7px;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    min-height: calc(100vh - 195px);
+  }
+  footer {
+    height: 50px;
+  }
+  .search input {
+    width: 650px;
+  }
+  .fa-search {
+    position: absolute;
+    top: 8px;
+    left: 254px;
+    color: #cdcdcd;
+  }
+  .fa-microphone {
+    position: absolute;
+    top: 8px;
+    left: 900px;
+    color: #cdcdcd;
+    cursor: pointer;
+  }
+  .fa-microphone::after {
+    content: "Search By Voice";
+    position: absolute;
+    display: none;
+    top: 30px;
+    left: -60px;
+    color: white;
+    background-color: black;
+    padding: 7px;
+    white-space: nowrap;
+  }
+}
